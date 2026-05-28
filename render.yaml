@@ -5,8 +5,9 @@ services:
   env: node
   plan: free
   
-  buildCommand: npm install
-  startCommand: npm start
+  buildCommand: npm install n8n
+  
+  startCommand: npx n8n
   
   envVars:
   
@@ -21,3 +22,6 @@ services:
   
   - key: GENERIC_TIMEZONE
     value: Asia/Karachi
+  
+  - key: NODE_VERSION
+    value: 20
